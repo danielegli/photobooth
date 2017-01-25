@@ -4,6 +4,8 @@ const exphbs = require('express-handlebars');
 
 const app = express();
 
+app.set('port', (process.env.PORT || 5000));
+
 app.use('/', express.static(path.join(__dirname, 'public')));
 
 app.engine('.hbs', exphbs({
@@ -19,6 +21,6 @@ app.get('/', (request, response) => {
   })
 })
 
-var server = app.listen(3000, function() {
-  console.log('Photobooth server running at http://localhost: ' + server.address().port);
+var server = app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });

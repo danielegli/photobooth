@@ -4,12 +4,15 @@
   "description": "Photo uploader and simple gallery",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "author": "Daniel Egli",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielegli/photobooth.git"
+  },
   "dependencies": {
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
@@ -17,5 +20,6 @@
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
-  }
+  },
+  "license": "MIT"
 }
